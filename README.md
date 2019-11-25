@@ -4,6 +4,12 @@ It also includes the tracking of a transcribe process and the use of S3 for audi
 
 ## Example of sending audio file via multipart form
 
+Multipart form POST request with paramters
+<ul>
+  <li>fileData: attached audio file.</li>
+  <li>numberOfSpeakers: Number of speakers for the audio file.</li>
+  </ul>
+
 ```shell
 
 curl -X POST \
@@ -15,7 +21,7 @@ curl -X POST \
 ```
 
 ## Example of getting transcription job progress
-After starting a transcription you are given a job ID which can be used to track progress.
+After starting a transcription you are given a job ID which can be used to track progress. Job ID is included in the URL parameters.
 
 ```shell
 
